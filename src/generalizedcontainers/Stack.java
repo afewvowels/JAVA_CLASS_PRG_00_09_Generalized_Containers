@@ -6,24 +6,24 @@
 package generalizedcontainers;
 
 /**
- *
+ * Generalized stack class
  * @author kbsmith01
  */
 public class Stack {
     
-    private String[] contents;
+    private Object[] contents;
     private int top;
 
-    public Stack() {
-        this.contents = new String[100];
+    public Stack(int size) {
+        this.contents = new Object[size];
         top = 0;
     }
     
-    public void push(String x) {
+    public void push(Object x) {
         this.contents[top++] = x;
     }
     
-    public String pop() {
+    public Object pop() {
         return this.contents[--top];
     }
 }
